@@ -37,7 +37,7 @@ Route::group([
     Route::get('/{id}', [UserController::class, 'show']);
     Route::post('/', [UserController::class, 'store']);
     Route::put('/{id}', [UserController::class, 'update']);
-    Route::delete('/{id}', [UserController::class, 'delete']);
+    Route::delete('/{id}', [UserController::class, 'destroy']);
 });
 Route::get('/unauthorized', function () {
     return response()->json(['message' => 'Unauthorized'], 401);
